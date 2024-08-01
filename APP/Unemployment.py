@@ -1,12 +1,14 @@
-# IMPORTS
+#print('hello from employment report') 
 
-# modules (don't need installation)
+
+#Modules that dont need installation 
 import os
 import json
-from pprint import pprint
 from statistics import mean
+from pprint import pprint
 
-# packages (require installation)
+#packages (require installation)
+import pandas 
 from dotenv import load_dotenv
 import requests
 from plotly.express import line
@@ -60,35 +62,8 @@ print("NO MONTHS:", len(this_year))
 #
 # Plot a line chart of unemployment rates over time.
 
-
 dates = [d["date"] for d in data]
 rates = [float(d["value"]) for d in data]
 
 fig = line(x=dates, y=rates, title="United States Unemployment Rate over time", labels= {"x": "Month", "y": "Unemployment Rate"})
 fig.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Message 2335
-
-
-
-
-
-
-
-
-
